@@ -1,0 +1,10 @@
+<%= form_for(current_user) do |f| %>
+
+  <div class="field">
+    <%= f.label :base_balance %><br />
+    <%= f.text_field :base_balance %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Update Base Balance"%>
+  </div>
+<% end %>

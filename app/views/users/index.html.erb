@@ -1,0 +1,17 @@
+<h1>Users#index</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.email %></td>
+		<td><%= user.base_balance %>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+  </tr>
+<% end %>
+</table>
+
+<p>Find me in app/views/user/index.html.erb</p>

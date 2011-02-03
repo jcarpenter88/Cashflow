@@ -1,0 +1,14 @@
+<h1>Dashboard</h1>
+
+<div>
+	<h4>Base Balance</h4>
+	<ul><%= number_to_currency(@base_balance) %></ul>
+	<ul><%= render "users/balance" %></ul><br />
+</div>
+
+<div>
+	<h4>Transactions</h4>
+	<ul><%= @total_transfers %></ul>
+</div>
+
+<%= link_to 'New Transaction', new_transaction_path %>

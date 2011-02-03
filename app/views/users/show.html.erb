@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Balance:</b>
+  <%= current_user.base_balance %><br />
+	<%= current_user.balance_plan %><br />
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_index_path %>
