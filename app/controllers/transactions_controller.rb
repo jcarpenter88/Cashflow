@@ -22,7 +22,8 @@ class TransactionsController < ApplicationController
 
   # POST /transactions
   def create
-    @transaction = Transaction.new(params[:transaction])
+    klass = params[:transaction].delete(:type).constantize
+    @transaction = klass.new(params[:transaction])
     @transaction.user = current_user
     
     if @transaction.save
@@ -38,7 +39,7 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.find(params[:id])
     
     if @transaction.update_attributes params[:transaction]
-      redirect_to @transaction
+      redirect_to transaction_path(@transaction)
     else
       render :edit
     end 

@@ -1,4 +1,3 @@
-<%= form_for(@transaction) do |f| %>
   <% if @transaction.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
@@ -12,23 +11,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %><br />
+    <%= form.label :name %><br />
+    <%= form.text_field :name %><br />
 
-    <%= f.label :amount %><br />
-    <%= f.text_field :amount %><br />
+    <%= form.label :amount %><br />
+    <%= form.text_field :amount %><br />
 	
-	  <%= f.label :start_date %><br />
-    <%= f.text_field :start_date %><br />
+	  <%= form.label :start_date %><br />
+    <%= form.text_field :start_date %><br />
 
-	  <%= f.label :type, "Transaction Type" %><br />
-    <%= f.select(:type, ['Expense', 'Income']) %><br />
+	  <%= form.label :type, "Transaction Type" %><br />
+    <%= form.select(:type, ['Expense', 'Income']) %><br />
 
-		<%= f.label :frequency %><br />		
-	 	<%= f.select(:frequency, [['Weekly', 'once_per_week'], ['Daily', 'once_per_day']]) %>
+		<%= form.label :frequency %><br />		
+	 	<%= form.select(:frequency, [['Weekly', 'once_per_week'], ['Daily', 'once_per_day']]) %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Create New Transaction" %>
+    <%= form.submit "Create New Transaction" %>
   </div>
-<% end %>
+<%# end %>

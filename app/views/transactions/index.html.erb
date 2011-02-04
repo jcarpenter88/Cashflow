@@ -14,9 +14,9 @@
 		<td><%= transaction.amount %></td>
 		<td><%= transaction.display_frequency %></td>
 		<td><%= transaction.class.name %></td>
-    <td><%= link_to 'Show', transaction %></td>
+    <td><%= link_to 'Show', transaction_path(transaction) %></td>
     <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
-    <td><%= link_to 'Destroy', transaction, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', transaction_path(transaction), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

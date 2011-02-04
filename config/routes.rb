@@ -11,6 +11,10 @@ Cashflow2::Application.routes.draw do
 
   resources :transactions
   
+  # resources :incomes, :controller => 'transactions'
+  # resources :expenses, :controller => 'transactions'
+  
+  
   
 
   # The priority is based upon order of creation:

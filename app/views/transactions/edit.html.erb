@@ -1,6 +1,8 @@
 <h1>Editing transaction</h1>
 
-<%= render 'form' %>
+<%= form_for(@transaction, :url => transaction_path(@transaction), :as => :transaction) do |form| %>
+	<%= render form %>
+<% end %>
 
-<%= link_to 'Show', @transaction %> |
+<%= link_to 'Show', transaction_path(@transaction) %> |
 <%= link_to 'Back', transactions_path %>
